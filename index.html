@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>泰柯 · 外卖运营看板</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+  <script src="./vendor/vue.global.prod.js"></script>
+</head>
+<body>
+  <!-- 图标精灵 -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <symbol id="i-logo" viewBox="0 0 24 24">
+      <path d="M18 8c-4 0-8 8-12 8a4 4 0 0 1 0-8c4 0 8 8 12 8a4 4 0 0 0 0-8Z"/>
+    </symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24">
+      <path d="M5.7 8.2h12.6l-1 11a2 2 0 0 1-2 1.8H8.7a2 2 0 0 1-2-1.8l-1-11Z"/>
+      <path d="M9 8.2V6.6a3 3 0 0 1 6 0v1.6"/>
+    </symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3.1"/>
+      <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.6 8.9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.54a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9v.1a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/>
+    </symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="6.6" height="6.6" rx="1.2"/>
+      <rect x="13.4" y="4" width="6.6" height="6.6" rx="1.2"/>
+      <rect x="4" y="13.4" width="6.6" height="6.6" rx="1.2"/>
+      <rect x="13.4" y="13.4" width="6.6" height="6.6" rx="1.2"/>
+    </symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24">
+      <path d="M4 20h16"/>
+      <rect x="5.4" y="11" width="3.2" height="6" rx=".8"/>
+      <rect x="10.4" y="6.5" width="3.2" height="10.5" rx=".8"/>
+      <rect x="15.4" y="9" width="3.2" height="8" rx=".8"/>
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24">
+      <circle cx="9.2" cy="8.4" r="3.1"/>
+      <path d="M3.5 19.2c.4-3 2.7-4.7 5.7-4.7s5.3 1.7 5.7 4.7"/>
+      <path d="M16 5.6a3 3 0 0 1 0 5.7"/>
+      <path d="M17.3 14.8c2.2.3 3.6 1.9 3.9 4.2"/>
+    </symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24">
+      <path d="m12 3.6 8.4 4.2L12 12 3.6 7.8 12 3.6Z"/>
+      <path d="m4.2 12 7.8 4 7.8-4"/>
+      <path d="m4.2 16.2 7.8 4 7.8-4"/>
+    </symbol>
+    <symbol id="i-more" viewBox="0 0 24 24">
+      <circle cx="5.5" cy="12" r="1.35"/>
+      <circle cx="12" cy="12" r="1.35"/>
+      <circle cx="18.5" cy="12" r="1.35"/>
+    </symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24">
+      <path d="m3 11 18-5v12L3 14v-3Z"/>
+      <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <path d="M12 3v12"/>
+      <path d="m7 10 5 5 5-5"/>
+      <path d="M5 21h14"/>
+    </symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24">
+      <path d="M18 8.8a6 6 0 0 0-12 0c0 5-2 6.2-2 6.2h16s-2-1.2-2-6.2Z"/>
+      <path d="M10.2 19a2.1 2.1 0 0 0 3.6 0"/>
+    </symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24">
+      <path d="M20 11a8 8 0 0 0-13.6-5.2L4 8"/>
+      <path d="M4 4v4h4"/>
+      <path d="M4 13a8 8 0 0 0 13.6 5.2L20 16"/>
+      <path d="M20 20v-4h-4"/>
+    </symbol>
+    <symbol id="i-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.4"/>
+      <path d="M12 11v5.2"/>
+      <path d="M12 7.9h.01"/>
+    </symbol>
+    <symbol id="i-chev-left" viewBox="0 0 24 24">
+      <path d="m14.5 6.5-5.5 5.5 5.5 5.5"/>
+    </symbol>
+    <symbol id="i-chev-down" viewBox="0 0 24 24">
+      <path d="m7 9.5 5 5 5-5"/>
+    </symbol>
+    <symbol id="i-chev-right" viewBox="0 0 24 24">
+      <path d="m9.5 6.5 5.5 5.5-5.5 5.5"/>
+    </symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24">
+      <path d="M4.5 12h15"/>
+      <path d="m14 6.5 5.5 5.5-5.5 5.5"/>
+    </symbol>
+  </svg>
+
+  <div id="app"></div>
+
+  <!-- 数据 -->
+  <script src="./src/data.js"></script>
+
+  <!-- 骨架层：接口 / 存储 / 共用筛选 -->
+  <script src="./src/core/http.js"></script>
+  <script src="./src/core/store-repo.js"></script>
+  <script src="./src/core/overview-api.js"></script>
+  <script src="./src/core/filters.js"></script>
+
+  <!-- 骨架层：侧边栏与看板外壳 -->
+  <script src="./src/components/shell/SidebarPanel.js"></script>
+  <script src="./src/components/shell/StatCards.js"></script>
+  <script src="./src/components/shell/TodoPanel.js"></script>
+  <script src="./src/components/shell/ClosurePanel.js"></script>
+  <script src="./src/components/shell/RightRail.js"></script>
+
+  <!-- 骨架层：通用图表 -->
+  <script src="./src/components/charts/chart-utils.js"></script>
+  <script src="./src/components/charts/HBars.js"></script>
+  <script src="./src/components/charts/RingChart.js"></script>
+  <script src="./src/components/charts/GroupBarChart.js"></script>
+  <script src="./src/components/charts/FlowChart.js"></script>
+  <script src="./src/components/charts/ScatterChart.js"></script>
+  <script src="./src/components/charts/OvChart.js"></script>
+  <script src="./src/components/charts/DonutChart.js"></script>
+  <script src="./src/components/charts/QuadrantScatter.js"></script>
+  <script src="./src/components/charts/FunnelRows.js"></script>
+  <script src="./src/components/charts/ReportDonut.js"></script>
+  <script src="./src/components/charts/ReportRadar.js"></script>
+
+  <!-- 页面层 -->
+  <script src="./src/pages/workbench.js"></script>
+  <script src="./src/pages/store-relation.js"></script>
+  <script src="./src/pages/product-maintenance.js"></script>
+  <script src="./src/pages/business-overview.js"></script>
+  <script src="./src/pages/traffic-overview.js"></script>
+  <script src="./src/pages/promotion-analysis.js"></script>
+  <script src="./src/pages/order-structure.js"></script>
+  <script src="./src/pages/fundamental.js"></script>
+  <script src="./src/pages/customer-analysis.js"></script>
+  <script src="./src/pages/review-analysis.js"></script>
+  <script src="./src/pages/product-sales.js"></script>
+  <script src="./src/pages/product-conversion.js"></script>
+  <script src="./src/pages/product-margin.js"></script>
+  <script src="./src/pages/new-product-review.js"></script>
+  <script src="./src/pages/marketing-spend.js"></script>
+  <script src="./src/pages/marketing-scene.js"></script>
+  <script src="./src/pages/marketing-ledger.js"></script>
+  <script src="./src/pages/data-download.js"></script>
+  <script src="./src/pages/store-report.js"></script>
+
+  <!-- 骨架层：路由与布局，最后挂载 -->
+  <script src="./src/core/router.js"></script>
+  <script src="./src/core/layout.js"></script>
+  <script src="./src/app.js"></script>
+</body>
+</html>

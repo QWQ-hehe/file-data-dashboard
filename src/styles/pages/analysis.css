@@ -1,0 +1,127 @@
+/* ================= 订单结构分析 / 基本面分析 / 顾客分析 / 评价分析 ================= */
+.an-summary {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 14px;
+}
+.an-summary-title { font-size: 12px; font-weight: 600; color: #2b3340; }
+.an-summary-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: #8a919e;
+  font-size: 10.5px;
+}
+.an-summary-line b { color: #3d4450; font-size: 12px; }
+
+.an-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(300px, 1fr);
+  gap: 18px;
+  padding: 2px 12px 12px;
+  align-items: start;
+}
+.an-split-chart { padding-top: 10px; }
+
+.an-hbars { display: flex; flex-direction: column; gap: 12px; padding: 8px 4px; }
+.an-hbar-row { display: flex; align-items: center; gap: 10px; }
+.an-hbar-label { color: #4c5361; font-size: 10.5px; text-align: right; flex: 0 0 auto; }
+.an-hbar-track {
+  flex: 1;
+  height: 15px;
+  border-radius: 2px;
+  background: #f2f4f8;
+  overflow: hidden;
+}
+.an-hbar-track i { display: block; height: 100%; border-radius: 2px; }
+.an-hbar-value { flex: 0 0 auto; color: #5b626e; font-size: 10px; min-width: 54px; }
+
+.an-mini-scroll { max-height: 238px; }
+.an-scroll-200 { max-height: 200px; }
+.an-scroll-240 { max-height: 240px; }
+.an-scroll-260 { max-height: 260px; }
+.an-note { padding: 0 12px 4px; color: #8a919e; font-size: 10px; }
+
+.an-three-col {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+.an-three-col > .ov-card { min-width: 0; }
+.an-sub-title {
+  padding: 8px 12px 2px;
+  color: #5b626e;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.an-ring-wrap { display: flex; align-items: center; gap: 12px; padding: 4px 12px 10px; }
+.an-ring { flex: 0 0 auto; }
+.an-ring-legend { display: flex; flex-direction: column; gap: 6px; color: #6f7783; font-size: 10.5px; }
+.an-ring-legend i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 6px;
+}
+
+.an-wide-tbl { min-width: 1000px; }
+.an-total-row td { background: #f7f9fc; font-weight: 600; }
+
+.an-banner {
+  flex: 0 0 auto;
+  border: 1px solid #f2e2bd;
+  background: #fdf8e9;
+  color: #8a6a24;
+  border-radius: 5px;
+  padding: 7px 12px;
+  font-size: 10.5px;
+}
+
+.an-product-head {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 6px 12px 10px;
+  border-bottom: 1px solid #f1f3f7;
+}
+.an-product-name { display: flex; flex-direction: column; gap: 3px; }
+.an-product-name b { font-size: 13px; color: #2b3340; }
+.an-product-name span { color: #8a919e; font-size: 10px; }
+.an-product-metrics { display: flex; flex-wrap: wrap; gap: 26px; }
+.an-product-metrics div { display: flex; flex-direction: column; gap: 2px; }
+.an-product-metrics span { color: #8a919e; font-size: 10px; }
+.an-product-metrics b { color: #2b3340; font-size: 15px; font-weight: 600; }
+
+.an-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 6px 10px;
+  padding: 10px 12px;
+  min-height: 120px;
+}
+.an-cloud span { line-height: 1.2; }
+.an-cloud .w0 { color: #2b3340; font-weight: 600; }
+.an-cloud .w1 { color: #c4554f; }
+.an-cloud .w2 { color: #4a63d0; }
+.an-cloud .w3 { color: #7d8592; }
+
+.an-samples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding: 4px 12px 12px; }
+.an-sample { border: 1px solid var(--line-soft); border-radius: 5px; padding: 9px 10px; background: #fbfcfe; }
+.an-sample-text { color: #3d4450; font-size: 11px; line-height: 1.6; }
+.an-sample-meta { margin-top: 5px; color: #a0a7b3; font-size: 9.5px; }
+
+.an-tag {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 10px;
+  background: #eef1f6;
+  color: #6f7783;
+  font-size: 9.5px;
+}
+.an-tag.bad { background: #f8e6e3; color: #c4554f; }
+

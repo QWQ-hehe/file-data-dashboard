@@ -1,0 +1,16 @@
+:root {
+  --bg: #f2f3f2;
+  --panel: #ffffff;
+  --line: #dfe3e9;
+  --line-soft: #eef0f4;
+  --text: #1f2329;
+  --text-2: #5b626e;
+  --text-3: #8a919e;
+  --blue: #4a63d0;
+  --navy: #40507a;
+  --red: #cf453f;
+  --amber: #c8962f;
+  --green: #2e7b62;
+  --sidebar-bg: #15171c;
+  --radius: 8px;
+}

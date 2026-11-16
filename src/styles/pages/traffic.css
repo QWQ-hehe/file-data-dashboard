@@ -1,0 +1,106 @@
+/* ================= 流量转化概览 / 推广分析 ================= */
+.tv-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tv-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tv-muted-value { color: #a9b0bb; font-size: 16px; }
+
+.tv-title-group { display: flex; align-items: baseline; gap: 12px; }
+.tv-tools { display: flex; align-items: center; gap: 10px; }
+
+.tv-seg {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+  flex: 0 0 auto;
+}
+.tv-seg button {
+  height: 24px;
+  padding: 0 10px;
+  border: none;
+  border-right: 1px solid var(--line);
+  background: #fff;
+  color: #5b626e;
+  font-family: inherit;
+  font-size: 10.5px;
+  cursor: pointer;
+}
+.tv-seg button:last-child { border-right: none; }
+.tv-seg button.on { background: #5b77b8; color: #fff; }
+
+.tv-metric-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 0 12px 4px;
+  color: #8a919e;
+  font-size: 10px;
+}
+.tv-metric-strip b { color: #3d4450; font-size: 12px; }
+
+.tv-two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.tv-chart { padding: 2px 10px 6px; }
+
+.tv-store-tbl { min-width: 900px; }
+.tv-score {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 18px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+}
+.score-A { background: #e6f1e9; color: #2e7b62; }
+.score-B { background: #eef1f6; color: #5b626e; }
+.score-C { background: #f8e6e3; color: #c4554f; }
+
+.tv-product-tbl { min-width: 1060px; }
+.tv-roi-text { color: #2e7b62; font-weight: 600; }
+
+.tv-roi-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8a919e;
+  font-size: 10px;
+}
+.tv-roi-legend i { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+
+.tv-roi-grid { min-width: 1000px; }
+.tv-roi-grid th { padding: 7px 8px; text-align: center; }
+.tv-roi-grid td { height: auto; padding: 4px 6px; border-bottom: 1px solid #eef1f6; text-align: center; }
+.tv-roi-grid th.tv-roi-name,
+.tv-roi-grid td.tv-roi-name { text-align: left; }
+.tv-roi-name { width: 112px; }
+
+.roi-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 4px 2px;
+  border-radius: 3px;
+}
+.roi-cell b { font-size: 10.5px; }
+.roi-cell span { font-size: 9px; color: #7d8592; }
+.roi-bg-low { background: #f8e6e3; color: #c4554f; }
+.roi-bg-mid { background: #fdf3dd; color: #a9801f; }
+.roi-bg-high { background: #e6f1e9; color: #2e7b62; }
+
+.tv-platform {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+}
+.tv-platform.mt { background: #fdf0e5; color: #b5722c; }
+.tv-platform.ele { background: #e9f0fb; color: #3f66b0; }
+
+.tv-foot-note { padding: 0 12px 8px; color: #a0a7b3; font-size: 9.5px; }
+.sc-axis-label { fill: #a0a7b3; font-size: 8.5px; }
+

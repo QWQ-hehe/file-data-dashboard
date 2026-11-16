@@ -1,0 +1,309 @@
+/* ================= 经营概览 ================= */
+.ov-filters {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.ov-quick-group { display: flex; align-items: center; gap: 4px; }
+.ov-filter-label { color: var(--text-2); font-size: 11px; margin-right: 2px; }
+
+.ov-quick {
+  height: 24px;
+  padding: 0 9px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--text-2);
+  font-family: inherit;
+  font-size: 10.5px;
+  cursor: pointer;
+}
+.ov-quick:hover { color: var(--blue); border-color: #c7d0e4; }
+.ov-quick.active { background: #e8edf9; border-color: #cfdaf4; color: #3f4f7a; font-weight: 600; }
+
+.ov-date {
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 9px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fbfcfe;
+  color: #4b5361;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.ov-date-input {
+  height: 28px;
+  width: 132px;
+  padding: 0 6px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fbfcfe;
+  color: #4b5361;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.ov-mode-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 18px;
+  padding: 0 7px;
+  border-radius: 9px;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+.ov-mode-badge.ok { background: #e8f4ee; color: #2e7b62; }
+.ov-mode-badge.warn { background: #fdf1e2; color: #a76b1f; }
+
+.ov-banner {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  border: 1px solid #d8e0ef;
+  background: #f2f6fd;
+  color: #4a5a7a;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.ov-banner.warn { border-color: #f0dcbd; background: #fdf7ec; color: #8a6524; }
+.ov-banner.error { border-color: #f0cfcd; background: #fdf3f2; color: #a04a44; }
+.ov-banner-text { flex: 1 1 auto; }
+.ov-banner .ov-retry { flex: 0 0 auto; height: 24px; padding: 0 10px; font-size: 11px; }
+
+.ov-empty {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 44px 20px;
+}
+.ov-empty-title { font-size: 15px; font-weight: 600; color: #3c4350; }
+.ov-empty p { margin: 0; color: #7d8592; font-size: 12px; line-height: 1.7; }
+
+.ov-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 4px;
+}
+.ov-scroll::-webkit-scrollbar { width: 7px; }
+.ov-scroll::-webkit-scrollbar-thumb { background: #c9cfd9; border-radius: 4px; }
+.ov-scroll::-webkit-scrollbar-track { background: transparent; }
+
+.ov-card {
+  flex: 0 0 auto;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(18, 24, 38, .03);
+}
+
+.ov-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 36px;
+  padding: 8px 12px;
+}
+.ov-card-title { margin: 0; font-size: 12px; font-weight: 600; color: #23272e; letter-spacing: .2px; }
+
+/* ---------- 核心指标 ---------- */
+.ov-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  padding: 0 12px 12px;
+}
+.ov-kpi {
+  padding: 10px 11px 9px;
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  background: #fcfdff;
+  min-width: 0;
+}
+.ov-kpi-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-2);
+  font-size: 10.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ov-kpi-label .i { color: #b0b7c2; }
+.ov-kpi-value {
+  margin-top: 5px;
+  color: #232936;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: .2px;
+  white-space: nowrap;
+}
+.ov-kpi-value span { margin-left: 3px; color: #8a919e; font-size: 10.5px; font-weight: 400; }
+.ov-kpi-foot { margin-top: 6px; color: #9aa1ad; font-size: 9.5px; white-space: nowrap; }
+.ov-kpi-foot b { font-weight: 600; }
+.ov-kpi-foot.up b { color: #2e7b62; }
+.ov-kpi-foot.down b { color: #c4554f; }
+.ov-kpi-foot span { color: #b0b7c2; }
+
+/* ---------- 指标分类 Tab 与表格 ---------- */
+.ov-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 12px 9px;
+}
+.ov-tab {
+  height: 26px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--text-2);
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background .15s, border-color .15s, color .15s;
+}
+.ov-tab:hover { color: var(--blue); border-color: #c7d0e4; }
+.ov-tab.active { background: #6b84c4; border-color: #6b84c4; color: #fff; }
+
+.ov-table-wrap { overflow-x: auto; }
+
+.ov-ind-tbl { min-width: 760px; }
+.ov-ind-tbl th { padding: 7px 12px; }
+.ov-ind-tbl td {
+  height: auto;
+  padding: 7px 12px;
+  border-bottom: 1px solid #eef1f6;
+  vertical-align: middle;
+}
+.ov-ind-tbl .ov-ind-name { width: 34%; color: #3d4450; }
+.ov-ind-tbl .ov-ind-name .i { color: #b6bdc8; vertical-align: -2px; }
+.ov-star-col { width: 56px; text-align: center; }
+
+.ov-cell-value { color: #232936; font-size: 11.5px; font-weight: 600; line-height: 1.5; white-space: nowrap; }
+.ov-cell-value.muted { color: #a9b0bb; font-weight: 400; }
+.ov-cell-delta { font-size: 9.5px; line-height: 1.4; color: #9aa1ad; white-space: nowrap; }
+.ov-cell-delta.up { color: #2e7b62; }
+.ov-cell-delta.down { color: #c4554f; }
+.ov-cell-delta.flat { color: #8a919e; }
+
+.ov-star {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: #c3c9d3;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+.ov-star.on { color: #e0a33a; }
+.ov-star:hover { color: #d3a24a; }
+
+/* ---------- 图表 ---------- */
+.ov-chart-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.ov-chart-card { padding-bottom: 4px; }
+.ov-chart-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px 12px 0;
+}
+.ov-chart-title { color: var(--text-2); font-size: 11px; }
+.ov-chart-value {
+  margin-top: 3px;
+  color: #232936;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.ov-chart-value span { margin-left: 7px; font-size: 10px; font-weight: 600; }
+.ov-chart-value span.up { color: #2e7b62; }
+.ov-chart-value span.down { color: #c4554f; }
+
+.ov-chart { padding: 2px 8px 4px; }
+.ov-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 0 6px 2px;
+  color: #6f7783;
+  font-size: 10px;
+}
+.ov-legend i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  border-radius: 2px;
+  vertical-align: 0;
+}
+.ov-svg { display: block; width: 100%; height: auto; }
+.ov-grid line { stroke: #eef1f6; stroke-width: 1; }
+.ov-axis text { fill: #a0a7b3; font-size: 9px; }
+.ov-xaxis text { fill: #8a919e; font-size: 8.5px; }
+.ov-xaxis .ov-xsub { fill: #b0b7c2; font-size: 8px; }
+
+.ov-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(320px, 1fr);
+  gap: 10px;
+}
+.ov-province-card { display: flex; flex-direction: column; }
+.ov-province-card .ov-table-wrap { flex: 1; min-height: 0; overflow: auto; }
+.ov-province-card .tbl th { padding: 6px 10px; }
+.ov-province-card .tbl td { height: 25px; padding: 0 10px; }
+
+.ov-up { color: #2e7b62; font-weight: 600; }
+.ov-down { color: #c4554f; font-weight: 600; }
+
+/* ---------- 门店风云榜 ---------- */
+.ov-rank-tools { display: flex; align-items: center; gap: 7px; }
+.w160 { width: 160px; }
+.ov-rank-tbl { min-width: 960px; }
+.ov-rank-tbl th { padding: 7px 12px; }
+.ov-rank-tbl td { height: auto; padding: 6px 12px; border-bottom: 1px solid #eef1f6; }
+.ov-rank-col { width: 54px; text-align: center; }
+.ov-rank {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #eef1f6;
+  color: #6f7783;
+  font-size: 9.5px;
+  font-weight: 600;
+}
+.ov-rank.r1 { background: #f4d58d; color: #7a5a10; }
+.ov-rank.r2 { background: #dfe3e9; color: #5b626e; }
+.ov-rank.r3 { background: #eccbae; color: #82502a; }
+
