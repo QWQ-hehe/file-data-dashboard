@@ -1,6 +1,6 @@
 /* 看板模拟数据（全部为中文 mock，无外部数据源） */
 window.DASHBOARD_DATA = {
-  brand: { name: "泰柯", title: "外卖运营看板" },
+  brand: { name: "XXX", title: "外卖运营看板" },
   user: { name: "沈健", role: "个人中心" },
 
   menus: [
@@ -390,7 +390,7 @@ window.DASHBOARD_DATA.businessOverview = {
     channels: ["全部渠道", "美团", "饿了么"],
     storeTypes: ["全部门店类型", "直营", "代理"],
     stores: ["全部门店", "长沙万象城店", "北京三里屯店", "上海新天地店", "深圳湾万象城店"],
-    brands: ["全部品牌", "泰柯"]
+    brands: ["全部品牌", "XXX"]
   },
   kpis: [
     { label: "外卖收入", value: "¥6,065,176", delta: "12.1%", diff: "(-345,885.1)", dir: "down" },
@@ -707,16 +707,16 @@ window.DASHBOARD_DATA.promotionAnalysis = {
     };
   })(),
   storeRows: [
-    { name: "广州维多利广场店", tk: "TK0411", platform: "美团", spend: "6,129", roi: "5.20", costRate: "18.40%", orders: "75", exposure: "78,020" },
-    { name: "江西新干新百店", tk: "TK0307", platform: "美团", spend: "4,914", roi: "6.57", costRate: "12.62%", orders: "768", exposure: "102,816" },
-    { name: "上海新天地店", tk: "TK0083", platform: "饿了么", spend: "3,566", roi: "4.52", costRate: "10.33%", orders: "343", exposure: "85,863" },
-    { name: "北京枫蓝国际店", tk: "TK0371", platform: "饿了么", spend: "3,642", roi: "5.62", costRate: "7.97%", orders: "505", exposure: "103,452" },
-    { name: "青岛印象城店", tk: "TK0419", platform: "美团", spend: "2,678", roi: "8.54", costRate: "6.12%", orders: "468", exposure: "56,733" },
-    { name: "北京三里屯店", tk: "TK0221", platform: "美团", spend: "2,642", roi: "7.78", costRate: "5.22%", orders: "401", exposure: "124,096" },
-    { name: "无锡融创茂店", tk: "TK0412", platform: "美团", spend: "2,415", roi: "9.11", costRate: "12.10%", orders: "550", exposure: "71,374" },
-    { name: "北京国贸店", tk: "TK0111", platform: "美团", spend: "2,513", roi: "5.05", costRate: "9.12%", orders: "283", exposure: "80,666" },
-    { name: "北京朝阳大悦城店", tk: "TK0048", platform: "美团", spend: "2,354", roi: "5.50", costRate: "7.97%", orders: "208", exposure: "140,153" },
-    { name: "上海真如环宇城店", tk: "TK0318", platform: "饿了么", spend: "2,308", roi: "5.61", costRate: "10.69%", orders: "292", exposure: "41,320" }
+    { name: "广州维多利广场店", tk: "XXX0411", platform: "美团", spend: "6,129", roi: "5.20", costRate: "18.40%", orders: "75", exposure: "78,020" },
+    { name: "江西新干新百店", tk: "XXX0307", platform: "美团", spend: "4,914", roi: "6.57", costRate: "12.62%", orders: "768", exposure: "102,816" },
+    { name: "上海新天地店", tk: "XXX0083", platform: "饿了么", spend: "3,566", roi: "4.52", costRate: "10.33%", orders: "343", exposure: "85,863" },
+    { name: "北京枫蓝国际店", tk: "XXX0371", platform: "饿了么", spend: "3,642", roi: "5.62", costRate: "7.97%", orders: "505", exposure: "103,452" },
+    { name: "青岛印象城店", tk: "XXX0419", platform: "美团", spend: "2,678", roi: "8.54", costRate: "6.12%", orders: "468", exposure: "56,733" },
+    { name: "北京三里屯店", tk: "XXX0221", platform: "美团", spend: "2,642", roi: "7.78", costRate: "5.22%", orders: "401", exposure: "124,096" },
+    { name: "无锡融创茂店", tk: "XXX0412", platform: "美团", spend: "2,415", roi: "9.11", costRate: "12.10%", orders: "550", exposure: "71,374" },
+    { name: "北京国贸店", tk: "XXX0111", platform: "美团", spend: "2,513", roi: "5.05", costRate: "9.12%", orders: "283", exposure: "80,666" },
+    { name: "北京朝阳大悦城店", tk: "XXX0048", platform: "美团", spend: "2,354", roi: "5.50", costRate: "7.97%", orders: "208", exposure: "140,153" },
+    { name: "上海真如环宇城店", tk: "XXX0318", platform: "饿了么", spend: "2,308", roi: "5.61", costRate: "10.69%", orders: "292", exposure: "41,320" }
   ]
 };
 
@@ -910,22 +910,22 @@ window.DASHBOARD_DATA.customerAnalysis = {
     values: [1.02, 1.01, 1.01, 1.0, 1.0, 1.01, 1.04, 1.02, 1.0, 1.0, 1.01, 1.0]
   },
   storeRows: [
-    { name: "成都春熙路店", tk: "TK100100", total: "1,685", newC: "772", old: "913", newRate: "54.2%", acq: "15.86%", repurchase: "14.20%", freq: "1.02", delta: "0.90pp", dir: "up" },
-    { name: "北京三里屯店", tk: "TK100201", total: "1,913", newC: "1,029", old: "884", newRate: "46.2%", acq: "13.09%", repurchase: "12.90%", freq: "1.01", delta: "0.25pp", dir: "up" },
-    { name: "拉萨万达店", tk: "TK100301", total: "1,769", newC: "893", old: "876", newRate: "49.5%", acq: "20.17%", repurchase: "18.30%", freq: "1.03", delta: "1.56pp", dir: "up" },
-    { name: "长沙万象城店", tk: "TK100172", total: "2,022", newC: "1,146", old: "876", newRate: "43.3%", acq: "13.91%", repurchase: "14.20%", freq: "1.03", delta: "2.47pp", dir: "up" },
-    { name: "深圳振业大厦店", tk: "TK100155", total: "1,644", newC: "818", old: "826", newRate: "50.2%", acq: "15.38%", repurchase: "15.30%", freq: "1.01", delta: "0.56pp", dir: "up" },
-    { name: "深圳梅园万科店", tk: "TK100141", total: "1,571", newC: "771", old: "800", newRate: "50.9%", acq: "16.73%", repurchase: "15.30%", freq: "1.01", delta: "0.34pp", dir: "up" },
-    { name: "深圳前海万象店", tk: "TK100244", total: "1,406", newC: "643", old: "763", newRate: "54.9%", acq: "16.72%", repurchase: "18.60%", freq: "1.01", delta: "0.90pp", dir: "up" },
-    { name: "广州维多利广场店", tk: "TK100381", total: "1,511", newC: "751", old: "760", newRate: "50.4%", acq: "18.02%", repurchase: "19.90%", freq: "1.04", delta: "1.58pp", dir: "up" },
-    { name: "苏州新光天地店", tk: "TK100193", total: "1,331", newC: "572", old: "759", newRate: "57.0%", acq: "18.34%", repurchase: "17.70%", freq: "1.02", delta: "0.85pp", dir: "up" },
-    { name: "北京枫蓝国际店", tk: "TK100238", total: "1,749", newC: "999", old: "750", newRate: "42.9%", acq: "14.21%", repurchase: "11.20%", freq: "1.02", delta: "1.41pp", dir: "up" },
-    { name: "自贡新玛特店", tk: "TK100354", total: "1,334", newC: "586", old: "748", newRate: "56.1%", acq: "22.53%", repurchase: "23.30%", freq: "1.07", delta: "1.34pp", dir: "up" },
-    { name: "北京大悦城店", tk: "TK100118", total: "1,477", newC: "737", old: "740", newRate: "50.1%", acq: "14.39%", repurchase: "14.10%", freq: "1.02", delta: "1.06pp", dir: "up" },
-    { name: "拉萨万达广场店", tk: "TK100362", total: "1,099", newC: "369", old: "730", newRate: "66.4%", acq: "22.43%", repurchase: "18.60%", freq: "1.03", delta: "0.56pp", dir: "up" },
-    { name: "深圳罗湖商业城店", tk: "TK100292", total: "1,361", newC: "644", old: "717", newRate: "52.7%", acq: "16.77%", repurchase: "15.50%", freq: "1.01", delta: "0.73pp", dir: "up" },
-    { name: "南京万象天地店", tk: "TK100415", total: "1,459", newC: "742", old: "717", newRate: "49.1%", acq: "15.31%", repurchase: "15.20%", freq: "1.01", delta: "0.39pp", dir: "up" },
-    { name: "北京国贸店", tk: "TK100311", total: "1,868", newC: "1,152", old: "716", newRate: "38.3%", acq: "10.99%", repurchase: "15.60%", freq: "1.04", delta: "0.28pp", dir: "up" }
+    { name: "成都春熙路店", tk: "XXX100100", total: "1,685", newC: "772", old: "913", newRate: "54.2%", acq: "15.86%", repurchase: "14.20%", freq: "1.02", delta: "0.90pp", dir: "up" },
+    { name: "北京三里屯店", tk: "XXX100201", total: "1,913", newC: "1,029", old: "884", newRate: "46.2%", acq: "13.09%", repurchase: "12.90%", freq: "1.01", delta: "0.25pp", dir: "up" },
+    { name: "拉萨万达店", tk: "XXX100301", total: "1,769", newC: "893", old: "876", newRate: "49.5%", acq: "20.17%", repurchase: "18.30%", freq: "1.03", delta: "1.56pp", dir: "up" },
+    { name: "长沙万象城店", tk: "XXX100172", total: "2,022", newC: "1,146", old: "876", newRate: "43.3%", acq: "13.91%", repurchase: "14.20%", freq: "1.03", delta: "2.47pp", dir: "up" },
+    { name: "深圳振业大厦店", tk: "XXX100155", total: "1,644", newC: "818", old: "826", newRate: "50.2%", acq: "15.38%", repurchase: "15.30%", freq: "1.01", delta: "0.56pp", dir: "up" },
+    { name: "深圳梅园万科店", tk: "XXX100141", total: "1,571", newC: "771", old: "800", newRate: "50.9%", acq: "16.73%", repurchase: "15.30%", freq: "1.01", delta: "0.34pp", dir: "up" },
+    { name: "深圳前海万象店", tk: "XXX100244", total: "1,406", newC: "643", old: "763", newRate: "54.9%", acq: "16.72%", repurchase: "18.60%", freq: "1.01", delta: "0.90pp", dir: "up" },
+    { name: "广州维多利广场店", tk: "XXX100381", total: "1,511", newC: "751", old: "760", newRate: "50.4%", acq: "18.02%", repurchase: "19.90%", freq: "1.04", delta: "1.58pp", dir: "up" },
+    { name: "苏州新光天地店", tk: "XXX100193", total: "1,331", newC: "572", old: "759", newRate: "57.0%", acq: "18.34%", repurchase: "17.70%", freq: "1.02", delta: "0.85pp", dir: "up" },
+    { name: "北京枫蓝国际店", tk: "XXX100238", total: "1,749", newC: "999", old: "750", newRate: "42.9%", acq: "14.21%", repurchase: "11.20%", freq: "1.02", delta: "1.41pp", dir: "up" },
+    { name: "自贡新玛特店", tk: "XXX100354", total: "1,334", newC: "586", old: "748", newRate: "56.1%", acq: "22.53%", repurchase: "23.30%", freq: "1.07", delta: "1.34pp", dir: "up" },
+    { name: "北京大悦城店", tk: "XXX100118", total: "1,477", newC: "737", old: "740", newRate: "50.1%", acq: "14.39%", repurchase: "14.10%", freq: "1.02", delta: "1.06pp", dir: "up" },
+    { name: "拉萨万达广场店", tk: "XXX100362", total: "1,099", newC: "369", old: "730", newRate: "66.4%", acq: "22.43%", repurchase: "18.60%", freq: "1.03", delta: "0.56pp", dir: "up" },
+    { name: "深圳罗湖商业城店", tk: "XXX100292", total: "1,361", newC: "644", old: "717", newRate: "52.7%", acq: "16.77%", repurchase: "15.50%", freq: "1.01", delta: "0.73pp", dir: "up" },
+    { name: "南京万象天地店", tk: "XXX100415", total: "1,459", newC: "742", old: "717", newRate: "49.1%", acq: "15.31%", repurchase: "15.20%", freq: "1.01", delta: "0.39pp", dir: "up" },
+    { name: "北京国贸店", tk: "XXX100311", total: "1,868", newC: "1,152", old: "716", newRate: "38.3%", acq: "10.99%", repurchase: "15.60%", freq: "1.04", delta: "0.28pp", dir: "up" }
   ],
   storeTotal: {
     total: "281,192", newC: "150,027", old: "131,165", newRate: "46.6%", acq: "16.40%", repurchase: "15.40%", freq: "1.01"
@@ -1198,7 +1198,7 @@ window.DASHBOARD_DATA.productMargin = {
   title: "商品毛利测算",
   updatedAt: "单件测算 · 安徽工学院店 · 美团 · 2026-11-12",
   filters: {
-    store: "安徽工学院店 · TK00169",
+    store: "安徽工学院店 · XXX00169",
     platform: "美团",
     discount: 10,
     memberRedPacket: true,
@@ -1236,7 +1236,7 @@ window.DASHBOARD_DATA.newProductReview = {
   current: {
     date: "11/06",
     year: "2026",
-    brand: "泰柯",
+    brand: "XXX",
     count: 4,
     tags: ["可可泰奶（冬季限定）", "手打柠檬茶", "香茅烤鸡翅"],
     more: "+1 款",
@@ -1295,13 +1295,13 @@ window.DASHBOARD_DATA.newProductReview = {
   ],
   funnelNote: "可可泰奶（冬季限定）是本批已记录销量最高的商品，共 1,526 件。同店样本实收较上线前 ▼1.79%。",
   history: [
-    { date: "10/02", year: "2026", brand: "泰柯", count: 1, tags: ["香茅烤鸡翅"], summary: "新品已记录销量占比 6.34%，上架前同期门店实收较上线前 ▲ 8.41%。", range: "2026-10-02 至 2026-10-08", status: "已复盘" },
-    { date: "09/25", year: "2026", brand: "泰柯", count: 1, tags: ["芝士泰奶"], summary: "新品已记录销量占比 18.63%，上架前同期门店实收较上线前 ▲ 49.37%。", range: "2026-09-25 至 2026-10-01", status: "已复盘" },
-    { date: "09/18", year: "2026", brand: "泰柯", count: 1, tags: ["手打柠檬茶"], summary: "新品已记录销量占比 4.73%，上架前同期门店实收较上线前 ▼ 4.4%。", range: "2026-09-18 至 2026-09-24", status: "已复盘" },
-    { date: "09/01", year: "2025", brand: "泰柯", count: 2, tags: ["咸法酪泰奶（清爽版）", "甄选泰奶"], summary: "新品已记录销量占比 10.25%，上架前同期门店实收较上线前 ▲ 6.18%。", range: "2025-09-01 至 2025-09-07", status: "已复盘" },
-    { date: "08/12", year: "2025", brand: "泰柯", count: 1, tags: ["招牌泰式奶茶"], summary: "新品已记录销量占比 12.21%，上架前同期门店实收较上线前 ▲ 1.25%。", range: "2025-08-12 至 2025-08-18", status: "已复盘" },
-    { date: "06/20", year: "2025", brand: "泰柯", count: 2, tags: ["椰香芒果糯米饭", "斑斓椰奶冻"], summary: "新品已记录销量占比 3.64%，上架前同期门店实收较上线前 ▲ 4.71%。", range: "2025-06-20 至 2025-06-26", status: "已复盘" },
-    { date: "04/11", year: "2025", brand: "泰柯", count: 1, tags: ["冬阴功海鲜面"], summary: "新品已记录销量占比 9.09%，上架前同期门店实收较上线前 ▲ 5.94%。", range: "2025-04-11 至 2025-04-17", status: "已复盘" }
+    { date: "10/02", year: "2026", brand: "XXX", count: 1, tags: ["香茅烤鸡翅"], summary: "新品已记录销量占比 6.34%，上架前同期门店实收较上线前 ▲ 8.41%。", range: "2026-10-02 至 2026-10-08", status: "已复盘" },
+    { date: "09/25", year: "2026", brand: "XXX", count: 1, tags: ["芝士泰奶"], summary: "新品已记录销量占比 18.63%，上架前同期门店实收较上线前 ▲ 49.37%。", range: "2026-09-25 至 2026-10-01", status: "已复盘" },
+    { date: "09/18", year: "2026", brand: "XXX", count: 1, tags: ["手打柠檬茶"], summary: "新品已记录销量占比 4.73%，上架前同期门店实收较上线前 ▼ 4.4%。", range: "2026-09-18 至 2026-09-24", status: "已复盘" },
+    { date: "09/01", year: "2025", brand: "XXX", count: 2, tags: ["咸法酪泰奶（清爽版）", "甄选泰奶"], summary: "新品已记录销量占比 10.25%，上架前同期门店实收较上线前 ▲ 6.18%。", range: "2025-09-01 至 2025-09-07", status: "已复盘" },
+    { date: "08/12", year: "2025", brand: "XXX", count: 1, tags: ["招牌泰式奶茶"], summary: "新品已记录销量占比 12.21%，上架前同期门店实收较上线前 ▲ 1.25%。", range: "2025-08-12 至 2025-08-18", status: "已复盘" },
+    { date: "06/20", year: "2025", brand: "XXX", count: 2, tags: ["椰香芒果糯米饭", "斑斓椰奶冻"], summary: "新品已记录销量占比 3.64%，上架前同期门店实收较上线前 ▲ 4.71%。", range: "2025-06-20 至 2025-06-26", status: "已复盘" },
+    { date: "04/11", year: "2025", brand: "XXX", count: 1, tags: ["冬阴功海鲜面"], summary: "新品已记录销量占比 9.09%，上架前同期门店实收较上线前 ▲ 5.94%。", range: "2025-04-11 至 2025-04-17", status: "已复盘" }
   ]
 };
 
@@ -1543,16 +1543,16 @@ window.DASHBOARD_DATA.marketingScene = {
     { platform: "饿了么", scene: "神抢手", orders: "7,184", gmv: "¥87,185", income: "待数据", incomeRate: "待数据", cups: "10,490", avgIncome: "待数据", activitySub: "¥69,180.00", avgSub: "¥9.63", profit: "¥21,004.36" }
   ],
   storeRows: [
-    { store: "安徽工学院店", tk: "TK00169", platform: "饿了么", scene: "拼好饭", orders: "23", orderShare: "15.2%", qty: "23", qtyShare: "12.5%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥0.00" },
-    { store: "安徽工学院店", tk: "TK00169", platform: "饿了么", scene: "神抢手", orders: "18", orderShare: "11.9%", qty: "22", qtyShare: "12.0%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥10.92" },
-    { store: "安徽工学院店", tk: "TK00169", platform: "饿了么", scene: "主站", orders: "110", orderShare: "72.8%", qty: "139", qtyShare: "75.5%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥10.29" },
-    { store: "安徽工学院店", tk: "TK00169", platform: "美团", scene: "神抢手", orders: "68", orderShare: "44.4%", qty: "85", qtyShare: "40.9%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥11.61" },
-    { store: "安徽工学院店", tk: "TK00169", platform: "美团", scene: "主站", orders: "85", orderShare: "55.6%", qty: "123", qtyShare: "59.1%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥11.81" },
-    { store: "深圳湾万象城店", tk: "TK0143", platform: "饿了么", scene: "拼好饭", orders: "74", orderShare: "17.7%", qty: "74", qtyShare: "13.4%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥0.24" },
-    { store: "深圳湾万象城店", tk: "TK0143", platform: "饿了么", scene: "神抢手", orders: "49", orderShare: "11.5%", qty: "62", qtyShare: "14.8%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥12.50" },
-    { store: "深圳湾万象城店", tk: "TK0143", platform: "饿了么", scene: "主站", orders: "295", orderShare: "70.6%", qty: "397", qtyShare: "71.8%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥11.12" },
-    { store: "深圳湾万象城店", tk: "TK0143", platform: "美团", scene: "神抢手", orders: "122", orderShare: "41.4%", qty: "151", qtyShare: "40.2%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥14.63" },
-    { store: "深圳湾万象城店", tk: "TK0143", platform: "美团", scene: "主站", orders: "173", orderShare: "58.6%", qty: "225", qtyShare: "59.8%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥12.15" }
+    { store: "安徽工学院店", tk: "XXX00169", platform: "饿了么", scene: "拼好饭", orders: "23", orderShare: "15.2%", qty: "23", qtyShare: "12.5%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥0.00" },
+    { store: "安徽工学院店", tk: "XXX00169", platform: "饿了么", scene: "神抢手", orders: "18", orderShare: "11.9%", qty: "22", qtyShare: "12.0%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥10.92" },
+    { store: "安徽工学院店", tk: "XXX00169", platform: "饿了么", scene: "主站", orders: "110", orderShare: "72.8%", qty: "139", qtyShare: "75.5%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥10.29" },
+    { store: "安徽工学院店", tk: "XXX00169", platform: "美团", scene: "神抢手", orders: "68", orderShare: "44.4%", qty: "85", qtyShare: "40.9%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥11.61" },
+    { store: "安徽工学院店", tk: "XXX00169", platform: "美团", scene: "主站", orders: "85", orderShare: "55.6%", qty: "123", qtyShare: "59.1%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥11.81" },
+    { store: "深圳湾万象城店", tk: "XXX0143", platform: "饿了么", scene: "拼好饭", orders: "74", orderShare: "17.7%", qty: "74", qtyShare: "13.4%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥0.24" },
+    { store: "深圳湾万象城店", tk: "XXX0143", platform: "饿了么", scene: "神抢手", orders: "49", orderShare: "11.5%", qty: "62", qtyShare: "14.8%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥12.50" },
+    { store: "深圳湾万象城店", tk: "XXX0143", platform: "饿了么", scene: "主站", orders: "295", orderShare: "70.6%", qty: "397", qtyShare: "71.8%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥11.12" },
+    { store: "深圳湾万象城店", tk: "XXX0143", platform: "美团", scene: "神抢手", orders: "122", orderShare: "41.4%", qty: "151", qtyShare: "40.2%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥14.63" },
+    { store: "深圳湾万象城店", tk: "XXX0143", platform: "美团", scene: "主站", orders: "173", orderShare: "58.6%", qty: "225", qtyShare: "59.8%", incomeRate: "待数据", avgIncome: "待数据", avgSub: "¥12.15" }
   ]
 };
 
@@ -1592,8 +1592,8 @@ window.DASHBOARD_DATA.dataDownload = {
   platforms: ["全部", "美团", "饿了么"],
   dateStart: "2026-11-13",
   dateEnd: "2026-11-13",
-  tkLabel: "TK 编码（逗号分隔；留空为全部，包含未对应门店）",
-  tkPlaceholder: "例：TK00169, TK0143",
+  tkLabel: "XXX 编码（逗号分隔；留空为全部，包含未对应门店）",
+  tkPlaceholder: "例：XXX00169, XXX0143",
   fields: [
     { label: "业务日期", on: true },
     { label: "门店名称", on: true },
@@ -1605,7 +1605,7 @@ window.DASHBOARD_DATA.dataDownload = {
     { label: "商品原价", on: true },
     { label: "入店人数", on: true },
     { label: "取消订单", on: true },
-    { label: "TK", on: true },
+    { label: "XXX", on: true },
     { label: "营业收入", on: true },
     { label: "顾客实付", on: true },
     { label: "下单人数", on: true }
@@ -1619,7 +1619,7 @@ window.DASHBOARD_DATA.storeReport = {
   title: "门店报告导出",
   updatedAt: "当前账号授权范围 66 家门店 · 字段固定保留，缺数据用「-」表示",
   tabs: ["日报", "周报", "月报"],
-  stores: ["济南万象城店 · TK00011", "上海静安大悦城店 · TK00014", "深圳湾万象城店 · TK0143", "安徽工学院店 · TK00169"],
+  stores: ["济南万象城店 · XXX00011", "上海静安大悦城店 · XXX00014", "深圳湾万象城店 · XXX0143", "安徽工学院店 · XXX00169"],
   platforms: ["全部", "美团", "饿了么"],
   targets: ["查看 PDF", "下载 PDF", "下载 PNG"],
   notes: [
@@ -1628,7 +1628,7 @@ window.DASHBOARD_DATA.storeReport = {
   ],
   daily: {
     store: "济南万象城店",
-    tk: "TK00011",
+    tk: "XXX00011",
     date: "2026-11-13",
     weekday: "周五",
     scope: "全部（美团+饿了么+京东外卖）",
@@ -1708,7 +1708,7 @@ window.DASHBOARD_DATA.storeReport = {
   weekly: {
     store: "上海静安大悦城店",
     city: "上海",
-    tk: "TK00014",
+    tk: "XXX00014",
     tabLabel: "周报",
     period: "2026-11-02 至 2026-11-08",
     status: "存在待改善指标，建议跟进",
@@ -1768,7 +1768,7 @@ window.DASHBOARD_DATA.storeReport = {
   monthly: {
     store: "上海静安大悦城店",
     city: "上海",
-    tk: "TK00014",
+    tk: "XXX00014",
     tabLabel: "月报",
     period: "2026-10-01 至 2026-10-31",
     status: "存在待改善指标，建议跟进",

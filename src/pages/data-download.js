@@ -52,7 +52,7 @@
         reportPlatformOk.value ? "" : "「" + report.value + "」不支持「" + platform.value + "」平台，请调整报表或平台"
       );
 
-      /* TK 编码：逗号 / 换行 / 空格分隔，去重并校验 TK+数字 */
+      /* XXX 编码：逗号 / 换行 / 空格分隔，去重并校验 XXX+数字 */
       const tkList = computed(() => {
         const seen = {};
         const list = [];
@@ -68,7 +68,7 @@
           });
         return list;
       });
-      const badTk = computed(() => tkList.value.filter((t) => !/^TK\d+$/.test(t)));
+      const badTk = computed(() => tkList.value.filter((t) => !/^XXX\d+$/.test(t)));
       const tkMeta = computed(() => {
         if (!tkList.value.length) return "留空为全部门店（包含未对应门店）";
         if (badTk.value.length) {
@@ -85,14 +85,14 @@
       const emptyTitle = computed(() => {
         if (dateError.value) return "当前日期条件不可导出";
         if (!reportPlatformOk.value) return "报表与平台不匹配";
-        if (badTk.value.length) return "TK 编码格式有误";
+        if (badTk.value.length) return "XXX 编码格式有误";
         if (checkedCount.value === 0) return "未选择导出字段";
         return "";
       });
       const emptySub = computed(() => {
         if (dateError.value) return dateError.value;
         if (!reportPlatformOk.value) return reportPlatformError.value;
-        if (badTk.value.length) return "TK 编码需形如 TK00169，多个用逗号或换行分隔";
+        if (badTk.value.length) return "XXX 编码需形如 XXX00169，多个用逗号或换行分隔";
         if (checkedCount.value === 0) return "至少勾选 1 个导出字段后才能下载 CSV";
         return "";
       });
@@ -100,13 +100,13 @@
       const exportName = computed(() => {
         const plat = platform.value === allPlatform ? "全平台" : platform.value;
         const range = start.value === end.value ? start.value : start.value + "_" + end.value;
-        const tkPart = tkList.value.length ? "_" + tkList.value.length + "个TK" : "";
+        const tkPart = tkList.value.length ? "_" + tkList.value.length + "个XXX" : "";
         return report.value + "_" + plat + "_" + range + tkPart + ".csv";
       });
       const exportHint = computed(() =>
         canExport.value
           ? "共 " + checkedCount.value + " 个字段 · " + spanDays.value + " 天 · " +
-            (tkList.value.length ? tkList.value.length + " 个 TK" : "全部门店") + "（演示，不产生真实文件）"
+            (tkList.value.length ? tkList.value.length + " 个 XXX" : "全部门店") + "（演示，不产生真实文件）"
           : "修正上方条件后可导出"
       );
       const doExport = () => {

@@ -192,7 +192,7 @@
                 <span class="muted-text">数据来源：门店维度 · 筛选维度</span>
               </div>
               <div class="ov-rank-tools">
-                <input class="f-input w170" v-model="acqKeyword" placeholder="搜索门店名 / TK 码" />
+                <input class="f-input w170" v-model="acqKeyword" placeholder="搜索门店名 / XXX 码" />
                 <button class="btn btn-ghost" @click="$emit('notify', '已导出最近30日获客率（演示）')">下载明细（Excel）</button>
               </div>
             </div>
@@ -286,7 +286,7 @@
               <h3 class="ov-card-title">门店明细</h3>
               <div class="ov-rank-tools">
                 <button class="btn btn-ghost" @click="$emit('notify', '指标选择：已选 9 项（演示）')">指标选择（9）</button>
-                <input class="f-input w160" v-model="keyword" placeholder="搜索门店名 / TK" />
+                <input class="f-input w160" v-model="keyword" placeholder="搜索门店名 / XXX" />
                 <button class="btn btn-primary" @click="$emit('notify', '已导出门店明细（演示）')">下载明细（Excel）</button>
               </div>
             </div>
@@ -294,7 +294,7 @@
               <table class="tbl an-wide-tbl">
                 <thead>
                   <tr>
-                    <th>门店名称</th><th>TK码</th><th>总下单人数</th><th>下单新客</th><th>下单老客</th>
+                    <th>门店名称</th><th>XXX码</th><th>总下单人数</th><th>下单新客</th><th>下单老客</th>
                     <th>新客占比</th><th>近30日新客获客率</th><th>近30日新客复购率</th><th>人均下单频次</th><th>老客占比环比</th>
                   </tr>
                 </thead>

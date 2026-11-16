@@ -26,8 +26,8 @@
       };
       /* 各门店当前有 mock 核心数据的报告类型 */
       const availMap = {
-        "济南万象城店 · TK00011": ["日报"],
-        "上海静安大悦城店 · TK00014": ["周报", "月报"]
+        "济南万象城店 · XXX00011": ["日报"],
+        "上海静安大悦城店 · XXX00014": ["周报", "月报"]
       };
       const rangeMap = {
         "日报": { from: "2026-11-13", to: "2026-11-13" },
@@ -166,7 +166,7 @@
 
         <div class="rp-filter">
           <div class="rp-field">
-            <label>门店名 / TK 搜索，重名以 TK 区分</label>
+            <label>门店名 / XXX 搜索，重名以 XXX 区分</label>
             <select class="f-select w220" v-model="store">
               <option v-for="s in data.stores" :key="s">{{ s }}</option>
             </select>
@@ -207,7 +207,7 @@
           <!-- 日报 -->
           <div class="rp-sheet" v-else-if="tab === '日报'">
             <div class="rp-band">
-              <span class="rp-brand">泰柯</span>
+              <span class="rp-brand">XXX</span>
               <b>门店经营日报</b>
               <span class="rp-band-date">{{ date }}</span>
             </div>

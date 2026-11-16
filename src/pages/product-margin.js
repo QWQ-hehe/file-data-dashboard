@@ -40,9 +40,9 @@
         "香茅烤鸡翅": "泰式小吃"
       };
       const storeConf = {
-        "安徽工学院店 · TK00169": { delta: 0, only: null, exclude: null },
-        "深圳湾万象城店 · TK00218": { delta: 0.003, only: null, exclude: ["可可系列"] },
-        "北京三里屯店 · TK00306": {
+        "安徽工学院店 · XXX00169": { delta: 0, only: null, exclude: null },
+        "深圳湾万象城店 · XXX00218": { delta: 0.003, only: null, exclude: ["可可系列"] },
+        "北京三里屯店 · XXX00306": {
           delta: -0.002,
           only: ["泰国红茶", "泰式奶茶", "泰式果茶"],
           exclude: null
@@ -171,9 +171,9 @@
               <label class="pm-field">
                 <span>门店</span>
                 <select class="f-select" v-model="store">
-                  <option>安徽工学院店 · TK00169</option>
-                  <option>深圳湾万象城店 · TK00218</option>
-                  <option>北京三里屯店 · TK00306</option>
+                  <option>安徽工学院店 · XXX00169</option>
+                  <option>深圳湾万象城店 · XXX00218</option>
+                  <option>北京三里屯店 · XXX00306</option>
                 </select>
               </label>
               <label class="pm-field">

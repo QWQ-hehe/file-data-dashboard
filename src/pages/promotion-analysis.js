@@ -530,7 +530,7 @@
             <div class="ov-card-head">
               <h3 class="ov-card-title">门店推广明细</h3>
               <div class="ov-rank-tools">
-                <input class="f-input w160" v-model="keyword" placeholder="搜索门店名 / TK码" />
+                <input class="f-input w160" v-model="keyword" placeholder="搜索门店名 / XXX码" />
                 <div class="tv-metric-wrap">
                   <button class="btn btn-ghost" @click="metricOpen = !metricOpen">指标选择（{{ visibleCount }}）</button>
                   <div v-if="metricOpen" class="tv-metric-panel">
@@ -547,7 +547,7 @@
               <table class="tbl tv-store-tbl">
                 <thead>
                   <tr>
-                    <th>门店</th><th>TK码</th><th>平台</th>
+                    <th>门店</th><th>XXX码</th><th>平台</th>
                     <th v-for="m in visibleMetrics" :key="m.key">{{ m.label }}</th>
                   </tr>
                 </thead>

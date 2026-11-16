@@ -365,7 +365,7 @@
               <table class="tbl ms-wide-tbl">
                 <thead>
                   <tr>
-                    <th>门店</th><th>TK</th><th>平台</th><th>场景</th><th>订单数</th><th>订单占比</th>
+                    <th>门店</th><th>XXX</th><th>平台</th><th>场景</th><th>订单数</th><th>订单占比</th>
                     <th>商品销量</th><th>销量占比</th><th>商家实收率</th><th>单均毛利额（理论）</th><th>单均商家补贴支出</th>
                   </tr>
                 </thead>

@@ -21,10 +21,10 @@
     template: `
       <aside class="sidebar" :class="{ collapsed }">
         <div class="brand">
-          <div class="brand-logo" :title="collapsed ? '展开侧边栏' : '泰柯'" @click="collapsed && $emit('toggle')">
+          <div class="brand-logo" :title="collapsed ? '展开侧边栏' : 'XXX'" @click="collapsed && $emit('toggle')">
             <svg class="i"><use href="#i-logo" /></svg>
           </div>
-          <div class="brand-name">泰柯 · 外卖运营看板</div>
+          <div class="brand-name">XXX · 外卖运营看板</div>
           <button class="brand-toggle" title="收起侧边栏" @click="$emit('toggle')">
             <svg class="i i-12"><use href="#i-chev-left" /></svg>
           </button>
